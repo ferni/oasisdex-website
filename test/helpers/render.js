@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { ThemeProvider } from 'theme-ui';
-import MakerProvider from '../../providers/MakerProvider';
 import theme from '../../theme';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
@@ -9,11 +8,9 @@ import Footer from '../../components/Footer';
 const Providers = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <MakerProvider network="testnet">
-        <Header />
-        {children}
-        <Footer />
-      </MakerProvider>
+      <Header />
+      {children}
+      <Footer />
     </ThemeProvider>
   );
 };

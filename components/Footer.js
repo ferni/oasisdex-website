@@ -1,33 +1,29 @@
 /** @jsx jsx */
-import { jsx, Flex, NavLink, Link as ExternalLink, Container } from 'theme-ui';
+import { jsx, Flex, NavLink, Container } from 'theme-ui';
 import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <Container>
+    <Container as="footer">
       <Flex
-        as="nav"
         sx={{
           ml: [0, 'auto'],
           mr: [null, 0],
+          my: 4,
           justifyContent: 'flex-end',
         }}
       >
-        <ExternalLink
+        <NavLink
           href="https://chat.makerdao.com/channel/help"
           target="_blank"
+          variant="footer"
+          sx={{
+            px: [2, 3],
+          }}
         >
-          <NavLink
-            variant="footer"
-            sx={{
-              px: [2, 3],
-            }}
-          >
-            Chat
-          </NavLink>
-        </ExternalLink>
-
-        <Link href="/terms">
+          Chat
+        </NavLink>
+        <Link href="/terms" passHref>
           <NavLink
             variant="footer"
             sx={{
@@ -35,17 +31,6 @@ const Footer = () => {
             }}
           >
             Terms of Service
-          </NavLink>
-        </Link>
-        <Link href="/faq">
-          <NavLink
-            variant="footer"
-            sx={{
-              pl: [2, 3],
-              mr: 5,
-            }}
-          >
-            Stats
           </NavLink>
         </Link>
       </Flex>

@@ -1,53 +1,32 @@
-import App from 'next/app';
-import MakerProvider from '../providers/MakerProvider';
 import { ThemeProvider } from 'theme-ui';
 import theme from '../theme';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Head from 'next/head';
+import Prism from '@theme-ui/prism';
+import HeadTags from '../components/HeadTags';
 
-export default class MyApp extends App {
-  state = {
-    network: '',
-  };
+const components = {
+  pre: ({ children }) => <>{children}</>,
+  code: Prism,
+};
 
-  componentDidMount() {
-    let network;
-    if (window.location.search.includes('kovan')) {
-      network = 'kovan';
-    } else if (window.location.search.includes('testnet')) {
-      network = 'testnet';
-    } else {
-      network = 'mainnet';
-    }
-    this.setState({
-      network,
-    });
-  }
+const MyApp = ({ Component, pageProps }) => {
+  return (
+    <ThemeProvider theme={theme} components={components}>
+      <HeadTags {...{ theme }} />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
 
-  render() {
-    const { Component, pageProps } = this.props;
-    const { network } = this.state;
-    return (
-      <ThemeProvider theme={theme}>
-        <Head>
-          <title>OasisDEX</title>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono:wght@400;700&display=swap"
-            rel="stylesheet"
-          />
-          <meta
-            name="viewport"
-            content="initial-scale=1.0, width=device-width"
-          />
-        </Head>
-        <MakerProvider network={network}>
-          <Header />
+// Only uncomment this method if you have blocking data requirements for
+// every single page in your application. This disables the ability to
+// perform automatic static optimization, causing every page in your app to
+// be server-side rendered.
+//
+// MyApp.getInitialProps = async (appContext) => {
+//   // calls page's `getInitialProps` and fills `appProps.pageProps`
+//   const appProps = await App.getInitialProps(appContext);
+//
+//   return { ...appProps }
+// }
 
-          <Component {...pageProps} />
-          <Footer />
-        </MakerProvider>
-      </ThemeProvider>
-    );
-  }
-}
+export default MyApp;

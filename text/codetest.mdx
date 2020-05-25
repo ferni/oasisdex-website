@@ -1,0 +1,26 @@
+import { Heading } from 'theme-ui';
+
+<Heading variant="h2">Check out this fancy syntax highlighting</Heading>
+
+```js
+const Index = () => (
+  // Woah, indexception...
+  <Layout>
+    <Flex sx={{ flexDirection: 'column' }}>
+      <Head>
+        <title>OasisDex Portal</title>
+      </Head>
+      <Heading sx={{ py: 4, px: 2 }}>OasisDex Portal</Heading>
+      <Text sx={{ px: 2 }}>Build cool stuff with OasisDex!</Text>
+      <Link href="/docs">
+        <NavLink>Documentation →</NavLink>
+      </Link>
+      <Box>
+        <CodeTestMDX />
+      </Box>
+    </Flex>
+  </Layout>
+);
+
+export default Index;
+```
