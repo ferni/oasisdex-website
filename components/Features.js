@@ -4,7 +4,7 @@ import CodeSnippetMdx from '../text/codeSnippet.mdx';
 
 const Features = () => {
   return (
-    <Box sx={{ border: '1px solid', borderColor: 'onBackgroundEmphasis' }}>
+    <Box sx={{ border: 'light', borderColor: 'onBackgroundEmphasis' }}>
       <Container sx={{ py: 6, my: 4 }}>
         <Container variant="landingContainer" mb={4}>
           <Text variant="sectionTitle" sx={{ mb: 4 }}>

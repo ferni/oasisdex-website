@@ -6,6 +6,7 @@ import Lead from '../components/Lead';
 import Features from '../components/Features';
 import QuickStats from '../components/QuickStats';
 import ProtocolDescription from '../components/ProtocolDescription.mdx';
+import GetStarted from '../components/GetStarted';
 
 const Index = () => (
   <BaseLayout>
@@ -16,6 +17,7 @@ const Index = () => (
     <QuickStats />
     <ProtocolDescription />
     <Features />
+    <GetStarted />
   </BaseLayout>
 );
 
