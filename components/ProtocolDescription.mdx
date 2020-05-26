@@ -1,0 +1,49 @@
+import { Container, Text, Grid, Flex } from 'theme-ui';
+import { Icon } from '@makerdao/dai-ui-icons';
+
+export const TextWithIcon = ({ children }) => (
+  <Flex sx={{ alignItems: 'center' }}>
+    <Icon name="checkmark" color="onSurface" />
+    <Text ml={3}>{children}</Text>
+  </Flex>
+);
+
+<Container variant="landingContainer" sx={{ py: 6, my: 4 }}>
+
+# What is the OasisDEX Protocol
+
+<Text variant="bodyLarge">
+
+OasisDEX is a fully decentralized exchange protocol which uses a set of open
+standards that are easy for anyone to build on and customize.
+
+Orders share
+the same [on-chain open order book]() format and can be matched by anyone in
+any venue and are also [settled on-chain](). Unique to most Decentralized
+exchange protocols, OasisDEX also supports [on-chain limit orders]() which
+are useful for highly liquid markets and larger order sizes.
+
+The main advantage to this design is that liquidity is available for other smart
+contracts to access in [one atomic transaction.]()
+
+</Text>
+
+<Grid columns={3} sx={{ mt: 5, fontSize: 4 }}>
+  <Grid>
+    <TextWithIcon>On chain orderbook</TextWithIcon>
+    <TextWithIcon>On chain settlement</TextWithIcon>
+    <TextWithIcon>On chain transactions</TextWithIcon>
+  </Grid>
+  <Grid>
+    <TextWithIcon>High liquidity</TextWithIcon>
+    <TextWithIcon>No protocol fees</TextWithIcon>
+    <TextWithIcon>No KYC</TextWithIcon>
+  </Grid>
+  <Grid>
+    <TextWithIcon>Auto new token support</TextWithIcon>
+    <TextWithIcon>No protocol fees</TextWithIcon>
+    <TextWithIcon>All transasctions p2p</TextWithIcon>
+  </Grid>
+</Grid>
+  
+</Container>

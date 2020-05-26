@@ -5,6 +5,7 @@ import BaseLayout from '../layouts/BaseLayout';
 import Lead from '../components/Lead';
 import Features from '../components/Features';
 import QuickStats from '../components/QuickStats';
+import ProtocolDescription from '../components/ProtocolDescription.mdx';
 
 const Index = () => (
   <BaseLayout>
@@ -13,6 +14,7 @@ const Index = () => (
     </Head>
     <Lead />
     <QuickStats />
+    <ProtocolDescription />
     <Features />
   </BaseLayout>
 );
