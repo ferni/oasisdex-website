@@ -9,8 +9,6 @@ const BaseLayout = ({ children }) => {
   const router = useRouter();
 
   useLayoutEffect(() => {
-    console.log('router');
-
     if (router.pathname.includes('docs')) {
       if (colorMode !== 'light') {
         setColorMode('light');

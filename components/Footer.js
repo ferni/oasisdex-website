@@ -12,7 +12,7 @@ const Footer = () => {
           mb: [2, 4],
         }}
       >
-        <Icon name="maker" size={5} />
+        <Icon name="logo" size="auto" width="152" height="40" />
         <Flex
           sx={{
             ml: ['auto'],

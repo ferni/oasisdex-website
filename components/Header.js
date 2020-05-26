@@ -5,14 +5,14 @@ import { Icon } from '@makerdao/dai-ui-icons';
 
 const Header = () => {
   return (
-    <Container as="nav">
+    <Container as="nav" mt={3}>
       <Flex
         sx={{
           alignItems: 'center',
           mb: [2, 4],
         }}
       >
-        <Icon name="maker" size={5} />
+        <Icon name="logo" size="auto" width="152" height="40" />
         <Flex
           as="nav"
           sx={{
