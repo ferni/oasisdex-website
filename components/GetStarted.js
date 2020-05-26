@@ -49,7 +49,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
     <Link href={link}>
       <Flex sx={{ alignItems: 'center', fontSize: 5 }}>
         <Text mr={2}>Call to action</Text>
-        <Icon name="arrowRight" />
+        <Icon name="arrow_right" />
       </Flex>
     </Link>
   </Grid>

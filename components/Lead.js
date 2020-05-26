@@ -18,11 +18,9 @@ const Lead = () => {
         to provide and access liquidity on chain, with limit order support.
       </Text>
       <Link href="/docs/introduction">
-        <a>
-          <Button variant="textual">
-            Go to Docs <Icon name="arrowRight" />
-          </Button>
-        </a>
+        <Button as="a" variant="textual">
+          Go to Docs <Icon name="arrow_right" />
+        </Button>
       </Link>
     </Container>
   );

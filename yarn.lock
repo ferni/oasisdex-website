@@ -1725,10 +1725,10 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@makerdao/dai-ui-icons@^0.0.24":
-  version "0.0.24"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.24.tgz#f216f76d8bf0eca724ba989c8a9e8e88b8b54787"
-  integrity sha512-nc2YO40BQeutgyqaufkWglsN9VXXo1Fyf4iD5C4qjDW5oV3FAK2PGeOhQwuLtxU25sDvsO50dSWrRM5VCiQX/A==
+"@makerdao/dai-ui-icons@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.37.tgz#2028c77717f021660293dd9aacfabe8cd9647f10"
+  integrity sha512-xqsHxUOiPD5Q8v08JAdDJqeAYoLPEEywNnohBjdvoLCudus7dDF8EPuEczdX4RKR7dV2t1e2k6XnGllU1vNc0w==
 
 "@makerdao/dai-ui-theme-maker@^0.0.36":
   version "0.0.36"

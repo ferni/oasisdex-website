@@ -48,7 +48,7 @@ const PartnersItem = ({ item: { name, type, link, linkText } }) => (
           sx={{ alignItems: 'center', fontSize: 5, justifyContent: 'flex-end' }}
         >
           <Text mr={2}>{linkText}</Text>
-          <Icon name="arrowRight" />
+          <Icon name="arrow_right" />
         </Flex>
       </Link>
     </Grid>
