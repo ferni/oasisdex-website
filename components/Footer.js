@@ -1,38 +1,37 @@
 /** @jsx jsx */
-import { jsx, Flex, NavLink, Container } from 'theme-ui';
+import { jsx, NavLink, Flex, Container } from 'theme-ui';
 import Link from 'next/link';
+import { Icon } from '@makerdao/dai-ui-icons';
 
 const Footer = () => {
   return (
     <Container as="footer">
       <Flex
         sx={{
-          ml: [0, 'auto'],
-          mr: [null, 0],
-          my: 4,
-          justifyContent: 'flex-end',
+          alignItems: 'center',
+          mb: [2, 4],
         }}
       >
-        <NavLink
-          href="https://chat.makerdao.com/channel/help"
-          target="_blank"
-          variant="footer"
+        <Icon name="maker" size={5} />
+        <Flex
           sx={{
-            px: [2, 3],
+            ml: ['auto'],
+            mr: [null, 0],
           }}
         >
-          Chat
-        </NavLink>
-        <Link href="/terms" passHref>
-          <NavLink
-            variant="footer"
-            sx={{
-              px: [2, 3],
-            }}
-          >
-            Terms of Service
-          </NavLink>
-        </Link>
+          <Link href={{ pathname: '/' }} passHref>
+            <NavLink>Home</NavLink>
+          </Link>
+          <Link href={{ pathname: '/docs' }} passHref>
+            <NavLink>Docs</NavLink>
+          </Link>
+          <Link href={{ pathname: '/faq' }} passHref>
+            <NavLink>FAQs</NavLink>
+          </Link>
+          <Link href={{ pathname: '/stats' }} passHref>
+            <NavLink>Stats</NavLink>
+          </Link>
+        </Flex>
       </Flex>
     </Container>
   );
