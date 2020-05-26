@@ -34,7 +34,7 @@ const QuickStats = () => {
               maxWidth: '170px',
               textAlign: 'center',
               mx: 'auto',
-              opacity: '0.7',
+              color: 'onSurfaceEmphasis',
             }}
           />
           <Text

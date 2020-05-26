@@ -4,11 +4,22 @@ import { icons } from '@makerdao/dai-ui-icons';
 const theme = {
   ...oasisTheme,
   icons,
+  colors: {
+    ...oasisTheme.colors,
+    onBackgroundEmphasis: '#31434A',
+    onSurfaceEmphasis: '#364C56',
+  },
   text: {
     ...oasisTheme.text,
     heading: {
       ...oasisTheme.text.heading,
       letterSpacing: '-0.04em',
+    },
+    sectionTitle: {
+      fontSize: 3,
+      color: 'onBackgroundAlt',
+      textTransform: 'uppercase',
+      letterSpacing: '0.2em',
     },
   },
   metadata: {
