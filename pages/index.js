@@ -7,6 +7,7 @@ import Features from '../components/Features';
 import QuickStats from '../components/QuickStats';
 import ProtocolDescription from '../components/ProtocolDescription.mdx';
 import GetStarted from '../components/GetStarted';
+import Partners from '../components/Partners';
 
 const Index = () => (
   <BaseLayout>
@@ -18,6 +19,7 @@ const Index = () => (
     <ProtocolDescription />
     <Features />
     <GetStarted />
+    <Partners />
   </BaseLayout>
 );
 

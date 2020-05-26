@@ -47,7 +47,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
       <Text variant="bodyLarge">{description}</Text>
     </Box>
     <Link href={link}>
-      <Flex sx={{ alignItems: 'center' }}>
+      <Flex sx={{ alignItems: 'center', fontSize: 5 }}>
         <Text mr={2}>Call to action</Text>
         <Icon name="arrowRight" />
       </Flex>
