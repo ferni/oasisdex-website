@@ -23,7 +23,7 @@ const Header = () => {
           <Link href={{ pathname: '/' }} passHref>
             <NavLink>Home</NavLink>
           </Link>
-          <Link href={{ pathname: '/docs' }} passHref>
+          <Link href={{ pathname: '/docs/introduction' }} passHref>
             <NavLink>Docs</NavLink>
           </Link>
           <Link href={{ pathname: '/faq' }} passHref>

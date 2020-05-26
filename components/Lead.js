@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, Container, Heading, Text, Button } from 'theme-ui';
 import Link from 'next/link';
+import { Icon } from '@makerdao/dai-ui-icons';
 
 const Lead = () => {
   return (
@@ -16,9 +17,11 @@ const Lead = () => {
         OasisDEX is a fully decentralized exchange protocol that allows anyone
         to provide and access liquidity on chain, with limit order support.
       </Text>
-      <Link href="/docs">
+      <Link href="/docs/introduction">
         <a>
-          <Button variant="textual">Go to Docs</Button>
+          <Button variant="textual">
+            Go to Docs <Icon name="arrowRight" />
+          </Button>
         </a>
       </Link>
     </Container>
