@@ -32,12 +32,12 @@ const USER_CASES = [
 const GetStartedItem = ({ item: { heading, description, link } }) => (
   <Grid
     columns={['1', '1fr 200px']}
-    gap={5}
+    gap={[4, 5]}
     sx={{
       alignItems: 'center',
       borderBottom: 'light',
       borderColor: 'onBackgroundEmphasis',
-      py: 5,
+      py: [4, 5],
     }}
   >
     <Box>
@@ -57,7 +57,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
 
 const GetStarted = () => {
   return (
-    <Container variant="landingContainer" sx={{ py: 6, my: 4, px: 3 }}>
+    <Container variant="landingContainer" sx={{ py: [4, 6], my: 4, px: 3 }}>
       <Text variant="sectionTitle">Get Started</Text>
       <Box>
         {USER_CASES.map((item, key) => (

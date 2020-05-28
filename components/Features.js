@@ -11,7 +11,7 @@ const Features = () => {
         borderColor: 'onBackgroundEmphasis',
       }}
     >
-      <Container sx={{ py: 6, my: 4 }}>
+      <Container sx={{ py: [4, 6], my: 4 }}>
         <Container variant="landingContainer" px={[3, 0]} mb={4}>
           <Text variant="sectionTitle" sx={{ mb: 4 }}>
             Features

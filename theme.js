@@ -97,6 +97,10 @@ const theme = {
     heading: {
       ...oasisTheme.text.heading,
       letterSpacing: '-0.04em',
+      fontSize: [7, 8],
+    },
+    bodyLarge: {
+      fontSize: [4, 5],
     },
     sectionTitle: {
       fontSize: 3,
