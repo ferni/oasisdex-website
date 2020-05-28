@@ -22,11 +22,29 @@ const theme = {
       ),
       viewBox: '0 0 152 40',
     },
+    logo_only: {
+      path: (
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M2.91636 20L20 2.91636L37.0836 20L20 37.0836L2.91636 20ZM19.1458 0.353814C19.6176 -0.117938 20.3824 -0.117938 20.8542 0.353814L39.6462 19.1458C40.1179 19.6176 40.1179 20.3824 39.6462 20.8542L20.8542 39.6462C20.3824 40.1179 19.6176 40.1179 19.1458 39.6462L0.353814 20.8542C-0.117938 20.3824 -0.117938 19.6176 0.353813 19.1458L19.1458 0.353814ZM20.0001 32.08L31.8484 20.2317C30.6618 21.1927 25.1212 25.1566 20.0001 20.0356C14.4095 14.4449 8.3188 19.6817 7.93891 20.0187L20.0001 32.08Z"
+          fill="currentColor"
+        />
+      ),
+      viewBox: '0 0 40 40',
+    },
   },
   colors: {
     ...oasisTheme.colors,
     onBackgroundEmphasis: '#31434A',
     onSurfaceEmphasis: '#364C56',
+  },
+  styles: {
+    ...oasisTheme.styles,
+    code: {
+      ...oasisTheme.styles.code,
+      overflow: 'auto',
+    },
   },
   borders: {
     ...oasisTheme.borders,

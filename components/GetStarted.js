@@ -31,7 +31,7 @@ const USER_CASES = [
 
 const GetStartedItem = ({ item: { heading, description, link } }) => (
   <Grid
-    columns={'1fr 200px'}
+    columns={['1', '1fr 200px']}
     gap={5}
     sx={{
       alignItems: 'center',
@@ -57,7 +57,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
 
 const GetStarted = () => {
   return (
-    <Container variant="landingContainer" sx={{ py: 6, my: 4 }}>
+    <Container variant="landingContainer" sx={{ py: 6, my: 4, px: 3 }}>
       <Text variant="sectionTitle">Get Started</Text>
       <Box>
         {USER_CASES.map((item, key) => (

@@ -5,14 +5,27 @@ import { Icon } from '@makerdao/dai-ui-icons';
 
 const Footer = () => {
   return (
-    <Container as="footer">
+    <Container as="footer" px={[3, 0]}>
       <Flex
         sx={{
           alignItems: 'center',
           mb: [2, 4],
         }}
       >
-        <Icon name="logo" size="auto" width="152" height="40" />
+        <Icon
+          name="logo_only"
+          size="auto"
+          width="40"
+          height="40"
+          sx={{ display: ['block', 'none'] }}
+        />
+        <Icon
+          name="logo"
+          size="auto"
+          width="152"
+          height="40"
+          sx={{ display: ['none', 'block'] }}
+        />
         <Flex
           sx={{
             ml: ['auto'],

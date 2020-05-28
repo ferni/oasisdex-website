@@ -10,6 +10,7 @@ const Lead = () => {
         textAlign: 'center',
         maxWidth: '768px',
         py: 6,
+        px: [3, 0],
       }}
     >
       <Heading as="h1">Build on OasisDEX protocol</Heading>

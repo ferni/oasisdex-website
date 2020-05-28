@@ -14,12 +14,19 @@ const QuickStats = () => {
   return (
     <Box sx={{ backgroundColor: 'surface', pt: 5, pb: 3 }}>
       <Container sx={{ fontFamily: 'heading' }}>
-        <Flex sx={{ justifyContent: 'space-between', mb: 5, mt: 3 }}>
+        <Flex
+          sx={{
+            justifyContent: 'space-between',
+            flexDirection: ['column', 'row'],
+            mb: 5,
+            mt: 3,
+          }}
+        >
           <Box sx={{ textAlign: 'center' }}>
             <Heading color="onSurface">$10.21M</Heading>
             <Text color="onSurfaceAlt">Total Volume</Text>
           </Box>
-          <Box sx={{ textAlign: 'center' }}>
+          <Box sx={{ textAlign: 'center', py: [5, 0] }}>
             <Heading color="onSurface">$1.21M</Heading>
             <Text color="onSurfaceAlt">Daily Volume</Text>
           </Box>

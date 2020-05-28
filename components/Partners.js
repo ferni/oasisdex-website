@@ -40,9 +40,11 @@ const PARTNERS = [
 
 const PartnersItem = ({ item: { name, type, link, linkText } }) => (
   <Card px={4}>
-    <Grid columns={3}>
+    <Grid columns={[2, 3]}>
       <Text variant="bodyLarge">{name}</Text>
-      <Text variant="bodyLarge">{type}</Text>
+      <Text variant="bodyLarge" sx={{ display: ['none', 'block'] }}>
+        {type}
+      </Text>
       <Link href={link}>
         <Flex
           sx={{ alignItems: 'center', fontSize: 5, justifyContent: 'flex-end' }}
