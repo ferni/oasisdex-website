@@ -1,11 +1,14 @@
 import { ThemeProvider } from 'theme-ui';
 import theme from '../theme';
-import Prism from '@theme-ui/prism';
+import ThemeUIPrism from '@theme-ui/prism';
+import PrismCore from 'prismjs/components/prism-core';
+import 'prismjs/components/prism-clike';
+import 'prismjs/components/prism-solidity';
 import HeadTags from '../components/HeadTags';
 
 const components = {
   pre: ({ children }) => <>{children}</>,
-  code: Prism,
+  code: props => <ThemeUIPrism {...props} Prism={PrismCore} />,
 };
 
 const MyApp = ({ Component, pageProps }) => {
