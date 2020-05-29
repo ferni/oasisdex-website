@@ -8,6 +8,8 @@ import QuickStats from '../components/QuickStats';
 import ProtocolDescription from '../components/ProtocolDescription.mdx';
 import GetStarted from '../components/GetStarted';
 import Partners from '../components/Partners';
+import Marketing from '../components/Marketing';
+import PartnersSmall from '../components/PartnersSmall';
 
 const Index = () => (
   <BaseLayout>
@@ -15,11 +17,13 @@ const Index = () => (
       <title>OasisDex Website</title>
     </Head>
     <Lead />
-    <QuickStats />
-    <ProtocolDescription />
-    <Features />
-    <GetStarted />
-    <Partners />
+    <Marketing />
+    {/* <QuickStats /> */}
+    {/* <ProtocolDescription /> */}
+    {/* <Features /> */}
+    {/* <GetStarted /> */}
+    {/* <Partners /> */}
+    <PartnersSmall />
   </BaseLayout>
 );
 
