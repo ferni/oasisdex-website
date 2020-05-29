@@ -139,11 +139,14 @@ Now we can find more information about this order by using the getOffer(uint id)
 seth call $OASIS 'getOffer(uint)(uint,address,uint,address)' 3411
 ```
 
-Output:  
-`8ac7230489e80000` -> Pay amount in DAI  
-`4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa` -> DAI Token Address  
-`6345785d8a0000` -> Buy amount in WETH  
-`d0a1e359811322d97991e03f863a0c30c2cf029c` -> WETH Token Address
+Output:
+
+```
+8ac7230489e80000 -> Pay amount in DAI
+4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa -> DAI Token Address
+6345785d8a0000 -> Buy amount in WETH
+d0a1e359811322d97991e03f863a0c30c2cf029c -> WETH Token Address
+```
 
 You can convert the hex outputs of DAI and WETH amounts to decimal:
 

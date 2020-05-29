@@ -20,8 +20,8 @@ const DocsLayout = ({ children }) => {
   return (
     <BaseLayout>
       <Container my={5}>
-        <Grid columns={'200px 1fr'} sx={{ alignItems: 'flex-start' }}>
-          <Grid>
+        <Grid columns={[1, '200px 1fr']} sx={{ alignItems: 'flex-start' }}>
+          <Grid sx={{ display: ['none', 'grid'] }}>
             {NAV_ITEMS.map(({ name, link }, key) => (
               <Link href={`${BASE_PATH}${link}`} key={key} passHref>
                 <NavLink
@@ -38,9 +38,10 @@ const DocsLayout = ({ children }) => {
           <Box
             sx={{
               // Omit margin top of first element from mdx file
-              '& > *:first-child': {
+              '& > *:first-of-type': {
                 mt: 0,
               },
+              px: [3, 0],
             }}
           >
             {children}
