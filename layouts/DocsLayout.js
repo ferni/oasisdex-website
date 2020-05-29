@@ -19,9 +19,9 @@ const DocsLayout = ({ children }) => {
 
   return (
     <BaseLayout>
-      <Container my={5}>
+      <Container my={[3, 5]} sx={{ px: [3, 0] }}>
         <Grid columns={[1, '200px 1fr']} sx={{ alignItems: 'flex-start' }}>
-          <Grid sx={{ display: ['none', 'grid'] }}>
+          <Grid>
             {NAV_ITEMS.map(({ name, link }, key) => (
               <Link href={`${BASE_PATH}${link}`} key={key} passHref>
                 <NavLink
@@ -41,7 +41,6 @@ const DocsLayout = ({ children }) => {
               '& > *:first-of-type': {
                 mt: 0,
               },
-              px: [3, 0],
             }}
           >
             {children}
