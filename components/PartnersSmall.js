@@ -1,44 +1,23 @@
 /** @jsx jsx */
-import {
-  jsx,
-  Card,
-  Container,
-  Text,
-  Heading,
-  Grid,
-  Link,
-  Flex,
-} from 'theme-ui';
+import { jsx, Container, Heading, Grid } from 'theme-ui';
 import { Icon } from '@makerdao/dai-ui-icons';
 
 const PARTNERS = [
   {
-    name: '1inch Exchange',
-    type: 'Builder',
-    linkText: 'Visit site',
-    link: '/',
-    icon: 'one_inch',
+    icon: 'zerox',
+    size: 5,
   },
   {
-    name: 'Kyber network',
-    type: 'Builder',
-    linkText: 'Visit site',
-    link: '/',
-    icon: 'kyber',
+    icon: 'oneinch',
+    size: 5,
   },
   {
-    name: '0x Protocol',
-    type: 'Builder',
-    linkText: 'Visit site',
-    link: '/',
-    icon: 'zero_x',
-  },
-  {
-    name: 'dYdX',
-    type: 'Market maker',
-    linkText: 'See ETH address',
-    link: '/',
     icon: 'dydx',
+    size: 6,
+  },
+  {
+    icon: 'kyber',
+    size: 6,
   },
 ];
 
@@ -48,9 +27,15 @@ const Partners = () => {
       <Heading variant="h4" sx={{ textAlign: 'center', mb: 5 }}>
         Join 30+ builders and partners
       </Heading>
-      <Grid columns={[1, 4]}>
-        {PARTNERS.map(({ icon }, key) => (
-          <Icon name={icon} size={5} key={key} sx={{ m: 'auto' }} />
+      <Grid columns={[2, 4]}>
+        {PARTNERS.map(({ icon, size }, key) => (
+          <Icon
+            name={icon}
+            size={size}
+            color="onBackground"
+            key={key}
+            sx={{ m: 'auto' }}
+          />
         ))}
       </Grid>
     </Container>
