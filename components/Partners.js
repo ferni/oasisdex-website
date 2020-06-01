@@ -33,7 +33,7 @@ const PARTNERS = [
   {
     name: 'Anonymous',
     type: 'Market maker',
-    linkText: 'See ETH address',
+    linkText: 'ETH address',
     link: '/',
   },
 ];
@@ -46,10 +46,10 @@ const PartnersItem = ({ item: { name, type, link, linkText } }) => (
         {type}
       </Text>
       <Link href={link}>
-        <Flex
-          sx={{ alignItems: 'center', fontSize: 5, justifyContent: 'flex-end' }}
-        >
-          <Text mr={2}>{linkText}</Text>
+        <Flex sx={{ alignItems: 'center', justifyContent: 'flex-end' }}>
+          <Text sx={{ fontFamily: 'heading', fontSize: [4, 5], mr: 2 }}>
+            {linkText}
+          </Text>
           <Icon name="arrow_right" />
         </Flex>
       </Link>
