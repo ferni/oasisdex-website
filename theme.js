@@ -450,17 +450,6 @@ const theme = {
       },
     },
   },
-
-  text: {
-    ...oasisTheme.text,
-    caps: {
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
-      color: 'onBackgroundAlt',
-      fontSize: [2, 3],
-      fontWeight: 'bold',
-    },
-  },
   metadata: {
     fontLinkHref:
       'https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono:wght@400;700&display=swap',
