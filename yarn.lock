@@ -1730,19 +1730,19 @@
   resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-icons/-/dai-ui-icons-0.0.37.tgz#2028c77717f021660293dd9aacfabe8cd9647f10"
   integrity sha512-xqsHxUOiPD5Q8v08JAdDJqeAYoLPEEywNnohBjdvoLCudus7dDF8EPuEczdX4RKR7dV2t1e2k6XnGllU1vNc0w==
 
-"@makerdao/dai-ui-theme-maker@^0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.36.tgz#ae1d4ee753a803ccaba3525d4f7d9c5d41d9936d"
-  integrity sha512-6yAPmDe91ELF1UGMLaAKTh+bYr7o09FOpY/7PvRtQusUd8v2JpYU211ThKZScVQ0fSUUG+9H/TMZR2czN8ZcXg==
+"@makerdao/dai-ui-theme-maker@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-maker/-/dai-ui-theme-maker-0.0.38.tgz#b48f11cc6ae0f5040cc8761cacbc02cd1c4895ec"
+  integrity sha512-paSgGIc2onxlE0p0tr4jpa/N7IrGst0zcktGiKdrhl33HmYV1DXScGm4dWzLBFHPU7moq12herP5q6HWWrS1XQ==
   dependencies:
     "@theme-ui/color" "^0.3.1"
 
-"@makerdao/dai-ui-theme-oasis@^0.0.36":
-  version "0.0.36"
-  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.36.tgz#a4da02ba70f09fcd38eedea246076f17c4fb4924"
-  integrity sha512-RxHR1BgREFDP4Oqc4IXEzHwE+iU7XZps/4TNzEaTKf6j7XY3nXnnw8RFkcsyXVRK5YpKft45a2uJOWgp/2AYzw==
+"@makerdao/dai-ui-theme-oasis@^0.0.38":
+  version "0.0.38"
+  resolved "https://registry.yarnpkg.com/@makerdao/dai-ui-theme-oasis/-/dai-ui-theme-oasis-0.0.38.tgz#d80fe3fd891cce572d350ce03ed42850215c57b1"
+  integrity sha512-AFTnEGhpnGQNxjjyh2f7F0Dx3uEuJb4mD186Dmyc+mxiulaKSfjuNDVnZPS33h3w4TVHlYRBYFTAkVWFPfwoRQ==
   dependencies:
-    "@makerdao/dai-ui-theme-maker" "^0.0.36"
+    "@makerdao/dai-ui-theme-maker" "^0.0.38"
 
 "@makerdao/test-helpers@^0.3.0":
   version "0.3.0"
