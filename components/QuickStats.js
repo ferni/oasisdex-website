@@ -23,15 +23,21 @@ const QuickStats = () => {
           }}
         >
           <Box sx={{ textAlign: 'center' }}>
-            <Heading color="onSurface">$10.21M</Heading>
+            <Heading variant="largeHeading" color="onSurface">
+              $10.21M
+            </Heading>
             <Text color="onSurfaceAlt">Total Volume</Text>
           </Box>
           <Box sx={{ textAlign: 'center', py: [5, 0] }}>
-            <Heading color="onSurface">$1.21M</Heading>
+            <Heading variant="largeHeading" color="onSurface">
+              $1.21M
+            </Heading>
             <Text color="onSurfaceAlt">Daily Volume</Text>
           </Box>
           <Box sx={{ textAlign: 'center' }}>
-            <Heading color="onSurface">55,000</Heading>
+            <Heading variant="largeHeading" color="onSurface">
+              55,000
+            </Heading>
             <Text color="onSurfaceAlt">Daily trades</Text>
           </Box>
         </Flex>

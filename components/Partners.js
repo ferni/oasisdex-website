@@ -60,7 +60,7 @@ const PartnersItem = ({ item: { name, type, link, linkText } }) => (
 const Partners = () => {
   return (
     <Container variant="landingContainer" mb={6}>
-      <Heading variant="h2" sx={{ textAlign: 'center', mb: 5 }}>
+      <Heading sx={{ textAlign: 'center', mb: 5 }}>
         Including builders and partners like
       </Heading>
       <Grid>

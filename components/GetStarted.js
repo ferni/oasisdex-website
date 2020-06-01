@@ -41,9 +41,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
     }}
   >
     <Box>
-      <Heading variant="h2" mb={2}>
-        {heading}
-      </Heading>
+      <Heading mb={2}>{heading}</Heading>
       <Text variant="bodyLarge">{description}</Text>
     </Box>
     <Link href={link}>

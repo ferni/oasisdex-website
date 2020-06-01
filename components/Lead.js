@@ -13,7 +13,9 @@ const Lead = () => {
         px: [3, 0],
       }}
     >
-      <Heading as="h1">Build on OasisDEX protocol</Heading>
+      <Heading variant="largeHeading" as="h1">
+        Build on OasisDEX protocol
+      </Heading>
       <Text variant="bodyLarge" sx={{ my: 3 }}>
         OasisDEX is a fully decentralized exchange protocol that allows anyone
         to provide and access liquidity on chain, with limit order support.
