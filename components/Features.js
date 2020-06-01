@@ -17,7 +17,7 @@ const Features = () => {
             Features
           </Text>
           <Heading mb={2}>One Method</Heading>
-          <Text fontSize={5}>for 99% of your implementation</Text>
+          <Text sx={{ fontSize: 5 }}>for 99% of your implementation</Text>
         </Container>
         <CodeSnippetMdx />
       </Container>

@@ -438,84 +438,21 @@ const theme = {
   },
   colors: {
     ...oasisTheme.colors,
-    onBackgroundEmphasis: '#31434A',
-    onSurfaceEmphasis: '#364C56',
-    syntaxEmphasis: '#DB1B60',
-    syntaxAlt: '#D7F714',
-    syntaxMuted: '#6D7477',
     liquidity: '#08D95C',
     profit: '#9ED317',
     growth: '#B31C55',
     modes: {
       light: {
         ...oasisTheme.colors.modes.light,
-        surface: '#D8D8D8',
-        syntaxEmphasis: '#000',
-        syntaxAlt: '#DB1B60',
-        syntaxMuted: '#6C8088',
-        onSurface: '#122229',
-        onSurfaceAlt: '#1E404A',
         liquidity: '#08D95C',
         profit: '#9ED317',
         growth: '#B31C55',
       },
     },
   },
-  styles: {
-    ...oasisTheme.styles,
-    code: {
-      overflow: 'auto',
-      p: 3,
-      fontSize: 3,
-      bg: 'surface',
 
-      // punctuation, characters like <, =>, (), etc
-      '.prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url': {
-        color: 'onSurface',
-      },
-
-      // comments
-      '.comment': {
-        fontStyle: 'italic',
-        color: 'syntaxMuted',
-      },
-
-      // class names, functions and numbers
-      '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .maybe-class-name, .regex, .important, .variable': {
-        color: 'primary',
-      },
-
-      // keywords like const, return
-      '.atrule, .attr-value, .keyword': {
-        color: 'syntaxEmphasis',
-      },
-
-      // strings, types
-      '.selector, .attr-name, .string, .char, .builtin, .inserted': {
-        color: 'syntaxAlt',
-      },
-    },
-  },
-  borders: {
-    ...oasisTheme.borders,
-    light: '1px solid',
-  },
   text: {
     ...oasisTheme.text,
-    heading: {
-      ...oasisTheme.text.heading,
-      letterSpacing: '-0.04em',
-      fontSize: [7, 8],
-    },
-    bodyLarge: {
-      fontSize: [4, 5],
-    },
-    sectionTitle: {
-      fontSize: 3,
-      color: 'onBackgroundAlt',
-      textTransform: 'uppercase',
-      letterSpacing: '0.2em',
-    },
     caps: {
       textTransform: 'uppercase',
       letterSpacing: '1px',
