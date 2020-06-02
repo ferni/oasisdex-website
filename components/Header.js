@@ -5,7 +5,7 @@ import { Icon } from '@makerdao/dai-ui-icons';
 
 const Header = () => {
   return (
-    <Container as="nav" mt={3} px={[3, 0]}>
+    <Container as="nav" mt={3}>
       <Flex
         sx={{
           alignItems: 'center',

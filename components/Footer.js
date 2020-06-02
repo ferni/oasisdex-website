@@ -5,7 +5,7 @@ import { Icon } from '@makerdao/dai-ui-icons';
 
 const Footer = () => {
   return (
-    <Container as="footer" px={[3, 0]}>
+    <Container as="footer">
       <Flex
         sx={{
           alignItems: 'center',

@@ -10,7 +10,6 @@ const Lead = () => {
         textAlign: 'center',
         maxWidth: '768px',
         py: 6,
-        px: [3, 0],
       }}
     >
       <Heading variant="largeHeading" as="h1">

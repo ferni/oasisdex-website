@@ -57,7 +57,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
 
 const GetStarted = () => {
   return (
-    <Container variant="landingContainer" sx={{ py: [4, 6], my: 4, px: 3 }}>
+    <Container variant="landingContainer" sx={{ py: [4, 6], my: 4 }}>
       <Text variant="sectionTitle">Get Started</Text>
       <Box>
         {USER_CASES.map((item, key) => (
