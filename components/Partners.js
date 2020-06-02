@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import {
   jsx,
+  Button,
   Card,
   Container,
   Text,
@@ -10,8 +11,35 @@ import {
   Flex,
 } from 'theme-ui';
 import { Icon } from '@makerdao/dai-ui-icons';
+import { useState } from 'react';
+
+const PARTNERS_INCREMENT = 4;
 
 const PARTNERS = [
+  {
+    name: '1inch Exchange',
+    type: 'Builder',
+    linkText: 'Visit site',
+    link: '/',
+  },
+  {
+    name: 'Kyber network',
+    type: 'Builder',
+    linkText: 'Visit site',
+    link: '/',
+  },
+  {
+    name: '0x Protocol',
+    type: 'Builder',
+    linkText: 'Visit site',
+    link: '/',
+  },
+  {
+    name: 'Anonymous',
+    type: 'Market maker',
+    linkText: 'ETH address',
+    link: '/',
+  },
   {
     name: '1inch Exchange',
     type: 'Builder',
@@ -58,15 +86,27 @@ const PartnersItem = ({ item: { name, type, link, linkText } }) => (
 );
 
 const Partners = () => {
+  const [visiblePartners, setVisiblePartners] = useState(PARTNERS_INCREMENT);
+
   return (
     <Container variant="landingContainer" mb={6}>
       <Heading sx={{ textAlign: 'center', mb: 5 }}>
         Including builders and partners like
       </Heading>
       <Grid>
-        {PARTNERS.map((item, key) => (
+        {PARTNERS.slice(0, visiblePartners).map((item, key) => (
           <PartnersItem {...{ item }} key={key} />
         ))}
+        {visiblePartners < PARTNERS.length ? (
+          <Button
+            onClick={() =>
+              setVisiblePartners(visiblePartners + PARTNERS_INCREMENT)
+            }
+            variant="textual"
+          >
+            Show More
+          </Button>
+        ) : null}
       </Grid>
     </Container>
   );
