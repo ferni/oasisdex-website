@@ -47,7 +47,6 @@ const theme = {
     landingContainer: {
       ...oasisTheme.layout.landingContainer,
       px: 3,
-      boxSizing: 'content-box',
     },
   },
 };

@@ -3,6 +3,13 @@ import { jsx, NavLink, Flex, Container, Link as ThemeLink } from 'theme-ui';
 import Link from 'next/link';
 import { Icon } from '@makerdao/dai-ui-icons';
 
+const LINKS = [
+  { url: '/', name: 'Home' },
+  { url: '/docs/introduction', name: 'Docs' },
+  { url: '/faq', name: 'FAQs' },
+  { url: '/stats', name: 'Stats' },
+];
+
 const Header = () => {
   return (
     <Container as="nav" mt={3}>
@@ -37,18 +44,11 @@ const Header = () => {
             mr: [null, 0],
           }}
         >
-          <Link href={{ pathname: '/' }} passHref>
-            <NavLink>Home</NavLink>
-          </Link>
-          <Link href={{ pathname: '/docs/introduction' }} passHref>
-            <NavLink>Docs</NavLink>
-          </Link>
-          <Link href={{ pathname: '/faq' }} passHref>
-            <NavLink>FAQs</NavLink>
-          </Link>
-          <Link href={{ pathname: '/stats' }} passHref>
-            <NavLink>Stats</NavLink>
-          </Link>
+          {LINKS.map(({ url, name }) => (
+            <Link href={url} passHref key={url}>
+              <NavLink sx={{ '&:last-child': { pr: 0 } }}>{name}</NavLink>
+            </Link>
+          ))}
         </Flex>
       </Flex>
     </Container>
