@@ -481,13 +481,6 @@ const theme = {
       },
     },
   },
-  links: {
-    ...oasisTheme.links,
-    nav: {
-      ...oasisTheme.links.nav,
-      textDecoration: 'none',
-    },
-  },
   metadata: {
     fontLinkHref:
       'https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono:wght@400;700&display=swap',

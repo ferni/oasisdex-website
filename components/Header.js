@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Flex, Container, Link as ThemeLink } from 'theme-ui';
+import { jsx, Flex, Container, Link as ThemeLink, NavLink } from 'theme-ui';
 import Link from 'next/link';
 import { Icon } from '@makerdao/dai-ui-icons';
 import { useState } from 'react';
@@ -14,13 +14,13 @@ const LINKS = [
 const NavLinks = ({ setOpened }) =>
   LINKS.map(({ url, name }) => (
     <Link href={url} passHref key={url}>
-      <ThemeLink
+      <NavLink
         sx={{ '&:last-child': { pr: [null, 0] } }}
         onClick={() => setOpened(false)}
         variant="links.nav"
       >
         {name}
-      </ThemeLink>
+      </NavLink>
     </Link>
   ));
 
@@ -59,30 +59,23 @@ const Header = () => {
         <Flex
           as="nav"
           sx={{
-            display: ['none', 'flex'],
+            display: [opened ? 'flex' : 'none', 'flex'],
+            ...(opened && {
+              position: ['fixed', 'initial'],
+              top: ['0', 'initial'],
+              bottom: ['0', 'initial'],
+              left: ['0', 'initial'],
+              right: ['0', 'initial'],
+              bg: ['surface', 'initial'],
+              alignItems: ['center', 'initial'],
+              justifyContent: ['flex-start', 'initial'],
+              flexDirection: ['column', 'initial'],
+              pt: [6, 'initial'],
+            }),
           }}
         >
           <NavLinks {...{ setOpened }} />
         </Flex>
-        <Flex
-          as="nav"
-          sx={{
-            display: [opened ? 'flex' : 'none', 'none'],
-            position: 'fixed',
-            top: '0',
-            bottom: '0',
-            left: '0',
-            right: '0',
-            bg: 'surface',
-            alignItems: 'center',
-            justifyContent: 'flex-start',
-            flexDirection: 'column',
-            pt: 6,
-          }}
-        >
-          <NavLinks {...{ setOpened }} />
-        </Flex>
-
         <Icon
           name={opened ? 'hamburger_close' : 'hamburger_open'}
           width="40"
