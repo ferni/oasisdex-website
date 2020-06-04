@@ -77,7 +77,7 @@ const Header = () => {
           <NavLinks {...{ setOpened }} />
         </Flex>
         <Icon
-          name={opened ? 'hamburger_close' : 'hamburger_open'}
+          name={opened ? 'hamburger_opened' : 'hamburger_closed'}
           width="40"
           height="25"
           size="auto"

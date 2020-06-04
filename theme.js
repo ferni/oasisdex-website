@@ -435,7 +435,7 @@ const theme = {
       ),
       viewBox: '0 0 81 111',
     },
-    hamburger_open: {
+    hamburger_closed: {
       path: (
         <>
           <rect width="40" height="3" fill="currentColor" />
@@ -445,7 +445,7 @@ const theme = {
       ),
       viewBox: '0 0 40 25',
     },
-    hamburger_close: {
+    hamburger_opened: {
       path: (
         <>
           <rect
