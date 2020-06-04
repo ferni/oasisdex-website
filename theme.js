@@ -435,6 +435,37 @@ const theme = {
       ),
       viewBox: '0 0 81 111',
     },
+    hamburger_open: {
+      path: (
+        <>
+          <rect width="40" height="3" fill="currentColor" />
+          <rect y="22" width="40" height="3" fill="currentColor" />
+          <rect x="10" y="11" width="30" height="3" fill="currentColor" />
+        </>
+      ),
+      viewBox: '0 0 40 25',
+    },
+    hamburger_close: {
+      path: (
+        <>
+          <rect
+            y="26.6401"
+            width="39.4664"
+            height="2.95998"
+            transform="rotate(-40 0 26.6401)"
+            fill="currentColor"
+          />
+          <rect
+            x="2.95996"
+            width="39.4664"
+            height="2.95998"
+            transform="rotate(45 2.95996 0)"
+            fill="currentColor"
+          />
+        </>
+      ),
+      viewBox: '0 0 33 30',
+    },
   },
   colors: {
     ...oasisTheme.colors,
@@ -448,6 +479,13 @@ const theme = {
         profit: '#9ED317',
         growth: '#B31C55',
       },
+    },
+  },
+  links: {
+    ...oasisTheme.links,
+    nav: {
+      ...oasisTheme.links.nav,
+      textDecoration: 'none',
     },
   },
   metadata: {
