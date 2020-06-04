@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { jsx, NavLink, Flex, Container, Link as ThemeLink } from 'theme-ui';
+import { jsx, Flex, Container, Link as ThemeLink, NavLink } from 'theme-ui';
 import Link from 'next/link';
 import { Icon } from '@makerdao/dai-ui-icons';
+import { useState } from 'react';
 
 const LINKS = [
   { url: '/', name: 'Home' },
@@ -10,17 +11,35 @@ const LINKS = [
   { url: '/stats', name: 'Stats' },
 ];
 
+const NavLinks = ({ setOpened }) =>
+  LINKS.map(({ url, name }) => (
+    <Link href={url} passHref key={url}>
+      <NavLink
+        sx={{ '&:last-child': { pr: [null, 0] } }}
+        onClick={() => setOpened(false)}
+        variant="links.nav"
+      >
+        {name}
+      </NavLink>
+    </Link>
+  ));
+
 const Header = () => {
+  const [opened, setOpened] = useState(false);
+
   return (
-    <Container as="nav" mt={3}>
+    <Container as="header" mt={3}>
       <Flex
         sx={{
           alignItems: 'center',
+          justifyContent: 'space-between',
           mb: [2, 4],
         }}
       >
         <Link href="/" passHref>
-          <ThemeLink sx={{ color: 'onSurface' }}>
+          <ThemeLink
+            sx={{ color: 'onSurface', position: 'relative', zIndex: 1 }}
+          >
             <Icon
               name="logo_only"
               size="auto"
@@ -40,16 +59,39 @@ const Header = () => {
         <Flex
           as="nav"
           sx={{
-            ml: ['auto'],
-            mr: [null, 0],
+            display: [opened ? 'flex' : 'none', 'flex'],
+            ...(opened && {
+              position: ['fixed', 'initial'],
+              top: ['0', 'initial'],
+              bottom: ['0', 'initial'],
+              left: ['0', 'initial'],
+              right: ['0', 'initial'],
+              bg: ['surface', 'initial'],
+              alignItems: ['center', 'initial'],
+              justifyContent: ['flex-start', 'initial'],
+              flexDirection: ['column', 'initial'],
+              pt: [6, 'initial'],
+            }),
           }}
         >
-          {LINKS.map(({ url, name }) => (
-            <Link href={url} passHref key={url}>
-              <NavLink sx={{ '&:last-child': { pr: 0 } }}>{name}</NavLink>
-            </Link>
-          ))}
+          <NavLinks {...{ setOpened }} />
         </Flex>
+        <Icon
+          name={opened ? 'hamburger_opened' : 'hamburger_closed'}
+          width="40"
+          height="25"
+          size="auto"
+          sx={{
+            display: ['block', 'none'],
+            cursor: 'pointer',
+            position: 'relative',
+            zIndex: 1,
+            'rect:last-of-type': {
+              fill: opened ? 'currentColor' : 'primary',
+            },
+          }}
+          onClick={() => setOpened(!opened)}
+        />
       </Flex>
     </Container>
   );
