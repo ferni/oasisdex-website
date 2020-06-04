@@ -45,8 +45,10 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
       <Text variant="bodyLarge">{description}</Text>
     </Box>
     <Link href={link}>
-      <Flex sx={{ alignItems: 'center', fontSize: 5 }}>
-        <Text mr={2}>Call to action</Text>
+      <Flex sx={{ alignItems: 'center' }}>
+        <Text sx={{ fontFamily: 'heading', fontSize: [4, 5], mr: 2 }}>
+          Call to action
+        </Text>
         <Icon name="arrow_right" />
       </Flex>
     </Link>
@@ -55,7 +57,7 @@ const GetStartedItem = ({ item: { heading, description, link } }) => (
 
 const GetStarted = () => {
   return (
-    <Container variant="landingContainer" sx={{ py: [4, 6], my: 4, px: 3 }}>
+    <Container variant="landingContainer" sx={{ py: [4, 6], my: 4 }}>
       <Text variant="sectionTitle">Get Started</Text>
       <Box>
         {USER_CASES.map((item, key) => (

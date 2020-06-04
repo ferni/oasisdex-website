@@ -19,7 +19,7 @@ const DocsLayout = ({ children }) => {
 
   return (
     <BaseLayout>
-      <Container my={[3, 5]} sx={{ px: [3, 0] }}>
+      <Container my={[3, 5]}>
         <Grid columns={[1, '200px 1fr']} sx={{ alignItems: 'flex-start' }}>
           <Grid>
             {NAV_ITEMS.map(({ name, link }, key) => (

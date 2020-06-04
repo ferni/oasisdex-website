@@ -454,6 +454,17 @@ const theme = {
     fontLinkHref:
       'https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono:wght@400;700&display=swap',
   },
+  layout: {
+    ...oasisTheme.layout,
+    container: {
+      ...oasisTheme.layout.container,
+      px: 3,
+    },
+    landingContainer: {
+      ...oasisTheme.layout.landingContainer,
+      px: 3,
+    },
+  },
 };
 
 export default theme;
