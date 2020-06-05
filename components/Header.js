@@ -7,8 +7,6 @@ import { useState } from 'react';
 const LINKS = [
   { url: '/', name: 'Home' },
   { url: '/docs/introduction', name: 'Docs' },
-  { url: '/faq', name: 'FAQs' },
-  { url: '/stats', name: 'Stats' },
 ];
 
 const NavLinks = ({ setOpened }) =>
@@ -40,20 +38,7 @@ const Header = () => {
           <ThemeLink
             sx={{ color: 'onSurface', position: 'relative', zIndex: 1 }}
           >
-            <Icon
-              name="logo_only"
-              size="auto"
-              width="40"
-              height="40"
-              sx={{ display: ['block', 'none'] }}
-            />
-            <Icon
-              name="logo"
-              size="auto"
-              width="152"
-              height="40"
-              sx={{ display: ['none', 'block'] }}
-            />
+            <Icon name="logo" size="auto" width="152" height="40" />
           </ThemeLink>
         </Link>
         <Flex
@@ -75,6 +60,17 @@ const Header = () => {
           }}
         >
           <NavLinks {...{ setOpened }} />
+          <NavLink
+            href="https://github.com/daifoundation/maker-otc"
+            target="_blank"
+            variant="footer"
+            sx={{
+              pr: 0,
+              pl: [0, 4],
+            }}
+          >
+            GitHub
+          </NavLink>
         </Flex>
         <Icon
           name={opened ? 'hamburger_opened' : 'hamburger_closed'}

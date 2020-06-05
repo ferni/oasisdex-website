@@ -3,12 +3,7 @@ import { jsx, NavLink, Flex, Container, Link as ThemeLink } from 'theme-ui';
 import Link from 'next/link';
 import { Icon } from '@makerdao/dai-ui-icons';
 
-const LINKS = [
-  { url: '/', name: 'Home' },
-  { url: '/docs/introduction', name: 'Docs' },
-  { url: '/faq', name: 'FAQs' },
-  { url: '/stats', name: 'Stats' },
-];
+const LINKS = [{ url: '/terms', name: 'Terms' }];
 
 const Footer = () => {
   return (
@@ -21,20 +16,7 @@ const Footer = () => {
       >
         <Link href="/" passHref>
           <ThemeLink sx={{ color: 'onSurface' }}>
-            <Icon
-              name="logo_only"
-              size="auto"
-              width="40"
-              height="40"
-              sx={{ display: ['block', 'none'] }}
-            />
-            <Icon
-              name="logo"
-              size="auto"
-              width="152"
-              height="40"
-              sx={{ display: ['none', 'block'] }}
-            />
+            <Icon name="logo" size="auto" width="152" height="40" />
           </ThemeLink>
         </Link>
         <Flex

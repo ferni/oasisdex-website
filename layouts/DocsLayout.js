@@ -7,7 +7,6 @@ import BaseLayout from '../layouts/BaseLayout';
 const NAV_ITEMS = [
   { name: 'Introduction', link: '/introduction' },
   { name: 'Use Proxy', link: '/use-proxy' },
-  { name: 'FAQS', link: '/faqs' },
 ];
 
 const BASE_PATH = '/docs';
