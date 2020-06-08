@@ -481,6 +481,12 @@ const theme = {
       },
     },
   },
+  styles: {
+    ...oasisTheme.styles,
+    h4: {
+      variant: 'text.microHeading',
+    },
+  },
   metadata: {
     fontLinkHref:
       'https://fonts.googleapis.com/css2?family=Rubik&family=Space+Mono:wght@400;700&display=swap',
