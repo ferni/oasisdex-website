@@ -13,7 +13,7 @@ const Lead = () => {
       }}
     >
       <Heading variant="largeHeading" as="h1">
-        Build on OasisDEX protocol
+        Build on OasisDEX Protocol
       </Heading>
       <Text variant="bodyLarge" sx={{ my: 3 }}>
         OasisDEX is a fully decentralized exchange protocol that allows anyone

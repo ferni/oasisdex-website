@@ -7,7 +7,7 @@ import DocsLayout from '../../layouts/DocsLayout';
 **Level**: Beginner  
 **Estimated Time**: 45 - 60 minutes
 
-This guide is based on the [Kovan deployed](https://kovan.etherscan.io/address/0xe325acB9765b02b8b418199bf9650972299235F4) [maker-otc contract](https://github.com/makerdao/maker-otc). This guide can also be used with the [mainnet deployment](https://etherscan.io/address/0x794e6e91555438aFc3ccF1c5076A74F42133d08D).
+This guide is based on the [Kovan deployed](https://kovan.etherscan.io/address/0xe325acB9765b02b8b418199bf9650972299235F4) [maker-otc contract](https://github.com/daifoundation/maker-otc). This guide can also be used with the [mainnet deployment](https://etherscan.io/address/0x794e6e91555438aFc3ccF1c5076A74F42133d08D).
 
 ## Overview
 
@@ -48,11 +48,11 @@ An order book for each market is implemented as two double-linked sorted lists, 
 
 ### Maker-OTC Contract Structure
 
-The trading engine involves the main contract [matching_market.sol](https://github.com/makerdao/maker-otc/blob/master/src/matching_market.sol) importing [simple_market.sol](https://github.com/makerdao/maker-otc/blob/master/src/simple_market.sol) and [expiring_market.sol](https://github.com/makerdao/maker-otc/blob/master/src/expiring_market.sol).
+The trading engine involves the main contract [matching_market.sol](https://github.com/daifoundation/maker-otc/blob/master/src/matching_market.sol) importing [simple_market.sol](https://github.com/daifoundation/maker-otc/blob/master/src/simple_market.sol) and [expiring_market.sol](https://github.com/daifoundation/maker-otc/blob/master/src/expiring_market.sol).
 
 Through the matching_market.sol contract, you can make all the necessary calls to the maker-otc trading engine.
 
-**Note:** It is recommended to make direct function calls to the maker-otc contract if you are intending to build other smart contracts that communicate with the maker-otc contract or build a trading bot. Example of this is the [dydx exchange](https://dydx.exchange/). However, if you’re integrating this maker-otc engine for wallets or UIs, then it is recommended to use the [Oasis Direct proxy contracts](https://github.com/makerdao/oasis-direct-proxy).
+**Note:** It is recommended to make direct function calls to the maker-otc contract if you are intending to build other smart contracts that communicate with the maker-otc contract or build a trading bot. Example of this is the [dydx exchange](https://dydx.exchange/). However, if you’re integrating this maker-otc engine for wallets or UIs, then it is recommended to use the [Oasis Direct proxy contracts](https://github.com/daifoundation/oasis-direct-proxy).
 
 To find all the functions available for this contract, check the source code on [etherscan](https://kovan.etherscan.io/address/0xe325acB9765b02b8b418199bf9650972299235F4#code). Below is a list of the main functions you can use from this contract:
 
@@ -266,7 +266,7 @@ If you have any questions, feel free to reach to reach out to the OasisDEX Proto
 ## Resources
 
 - [Maker-otc contract](https://kovan.etherscan.io/address/0x4a6bc4e803c62081ffebcc8d227b5a87a58f1f8f#code)
-- [Maker-otc repo](https://github.com/makerdao/maker-otc)
+- [Maker-otc repo](https://github.com/daifoundation/maker-otc)
 - [Dapptools](https://github.com/dapphub/dapptools)
 - [Setup seth](https://github.com/makerdao/developerguides/blob/master/devtools/seth/seth-guide-01/seth-guide-01.md)
 - [Overview of Dexes](https://hackernoon.com/the-world-of-decentralised-exchanges-on-the-ethereum-network-an-overview-ee25fc5f9f)

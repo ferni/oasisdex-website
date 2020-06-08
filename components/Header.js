@@ -26,7 +26,11 @@ const Header = () => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <Container as="header" mt={3}>
+    <Container
+      as="header"
+      sx={{ position: [opened ? 'fixed' : 'initial', 'initial'] }}
+      mt={3}
+    >
       <Flex
         sx={{
           alignItems: 'center',

@@ -11,7 +11,7 @@ import DocsLayout from '../../layouts/DocsLayout';
 
 Trading on decentralized marketplaces involves signing multiple transactions with your wallet. This leads to having higher chances of having failed transactions. Using a proxy simplifies this process by combining many transactions into one.
 
-This guide will show you how to make trades on the OasisDEX Protocol through the [Oasis Direct Proxy](https://github.com/makerdao/oasis-direct-proxy). The Oasis Direct Proxy allows you to bundle together many function calls into a single transaction. So, when you have to trade some ERC-20 tokens, you will be able to do it all in one transaction.
+This guide will show you how to make trades on the OasisDEX Protocol through the [Oasis Direct Proxy](https://github.com/daifoundation/oasis-direct-proxy). The Oasis Direct Proxy allows you to bundle together many function calls into a single transaction. So, when you have to trade some ERC-20 tokens, you will be able to do it all in one transaction.
 
 This can be done through the DS-Proxy contract, which is a generic mechanism that allows for bundling transactions and having allowances setup once for different contracts, or by creating your own proxy contract that can interact with the Oasis Direct Proxy contract. Another example of a proxy contract is the one created by [https://instadapp.io/](https://instadapp.io/), which interacts with many services.
 
@@ -33,7 +33,7 @@ Using a proxy contract is beneficial for you as a user or as a developer that wa
 
 # Sections
 
-This guide will demonstrate how to use the Oasis Direct Proxy functions available on the GitHub repository [here](https://github.com/makerdao/oasis-direct-proxy). If you also want to learn the extra details of each function, please also read the README from the mentioned repository.
+This guide will demonstrate how to use the Oasis Direct Proxy functions available on the GitHub repository [here](https://github.com/daifoundation/oasis-direct-proxy). If you also want to learn the extra details of each function, please also read the README from the mentioned repository.
 
 This guide works with the MCD Dai [0.2.17 Kovan Release](https://changelog.makerdao.com/releases/kovan/0.2.17/contracts.json). Here you will find all the necessary contract addresses.
 
@@ -110,23 +110,23 @@ Now to see your proxy contract address, execute the above command that verifies 
 
 ## Oasis Direct Proxy Functions
 
-These functions are used to make instant market orders on the marketplace. If you want to see a frontend example, check out the instant page on [oasis.app/trade/instant](https://oasis.app/trade/instant). If you want to make a simple limit order, then check the OasisDEX protocol [contract](https://github.com/makerdao/maker-otc).
+These functions are used to make instant market orders on the marketplace. If you want to see a frontend example, check out the instant page on [oasis.app/trade/instant](https://oasis.app/trade/instant). If you want to make a simple limit order, then check the OasisDEX protocol [contract](https://github.com/daifoundation/maker-otc).
 
 The Oasis Direct Proxy covers 6 functions that you could use. These are:
 
-- [sellAllAmount](https://github.com/makerdao/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L27) - Triggering an ERC-20 for ERC-20 trade
+- [sellAllAmount](https://github.com/daifoundation/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L27) - Triggering an ERC-20 for ERC-20 trade
 
-- [sellAllAmountPayEth](https://github.com/makerdao/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L36) - Triggering an ETH for ERC-20 token trade
+- [sellAllAmountPayEth](https://github.com/daifoundation/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L36) - Triggering an ETH for ERC-20 token trade
 
-- [sellAllAmountBuyEth](https://github.com/makerdao/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L45) - Triggering an ERC-20 for ETH trade
+- [sellAllAmountBuyEth](https://github.com/daifoundation/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L45) - Triggering an ERC-20 for ETH trade
 
-- [buyAllAmount](https://github.com/makerdao/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L54) - Triggering an ERC-20 for ERC-20 trade
+- [buyAllAmount](https://github.com/daifoundation/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L54) - Triggering an ERC-20 for ERC-20 trade
 
-- [buyAllAmountPayEth](https://github.com/makerdao/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L65) - Triggering an ETH for ERC-20 token trade
+- [buyAllAmountPayEth](https://github.com/daifoundation/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L65) - Triggering an ETH for ERC-20 token trade
 
-- [buyAllAmountBuyEth](https://github.com/makerdao/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L76) - Triggering an ERC-20 for ETH trade
+- [buyAllAmountBuyEth](https://github.com/daifoundation/oasis-direct-proxy/blob/321f63bb33fb534c490e8c56680daeab10608bc1/src/OasisDirectProxy.sol#L76) - Triggering an ERC-20 for ETH trade
 
-If you want to understand each function in more detail, please do read the provided [README](https://github.com/makerdao/oasis-direct-proxy). For example, if you want to sell exactly 10 BAT for some amount of ETH, you can use sellAllAmountBuyEth(). If you want to sell at least 10 ZRX for some specified amount of DAI, you can use buyAllAmount() as you will be buying specific amount of DAI, paying for it with ZRX.
+If you want to understand each function in more detail, please do read the provided [README](https://github.com/daifoundation/oasis-direct-proxy). For example, if you want to sell exactly 10 BAT for some amount of ETH, you can use sellAllAmountBuyEth(). If you want to sell at least 10 ZRX for some specified amount of DAI, you can use buyAllAmount() as you will be buying specific amount of DAI, paying for it with ZRX.
 
 These functions will wrap/unwrap ETH (if necessary), check the on-chain liquidity (using getBuyAmount() and getPayAmount() OTC methods) and finally call OTC’s buyAllAmount/sellAllAmount() methods if the liquidity and price is within user’s supplied limits.
 
@@ -196,9 +196,9 @@ In this guide you have learned how to use your proxy contract to execute Oasis D
 
 # Additional Resources
 
-- Make sure to read the Oasis Direct Proxy Actions github [repo](https://github.com/makerdao/oasis-direct-proxy), as it explains in detail every function call.
+- Make sure to read the Oasis Direct Proxy Actions github [repo](https://github.com/daifoundation/oasis-direct-proxy), as it explains in detail every function call.
 
-- [OasisDEX Protocol](https://github.com/makerdao/maker-otc)
+- [OasisDEX Protocol](https://github.com/daifoundation/maker-otc)
 
 # Help
 
