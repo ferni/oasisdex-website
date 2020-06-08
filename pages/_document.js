@@ -12,7 +12,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <meta name="description" content="Marketing site for OasisDEX." />
+          <meta
+            name="description"
+            content="Information about the OasisDEX Protocol."
+          />
           <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         </Head>
         <body>
