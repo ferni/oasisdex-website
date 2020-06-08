@@ -16,7 +16,7 @@ const BaseLayout = ({ children }) => {
     } else if (colorMode === 'light') {
       setColorMode('default');
     }
-  }, [router]);
+  }, [router.pathname, colorMode, setColorMode]);
 
   return (
     <>
