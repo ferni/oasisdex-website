@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Container, jsx, Card, Flex, Grid } from 'theme-ui';
+import { Container, jsx, Card } from 'theme-ui';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
