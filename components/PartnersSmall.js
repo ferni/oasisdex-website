@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Heading, Grid } from 'theme-ui';
+import { jsx, Container, Heading, Grid, Flex } from 'theme-ui';
 import { Icon } from '@makerdao/dai-ui-icons';
 
 const PARTNERS = [
@@ -10,10 +10,6 @@ const PARTNERS = [
   {
     icon: 'oneinch',
     size: 5,
-  },
-  {
-    icon: 'dydx',
-    size: 6,
   },
   {
     icon: 'kyber',
@@ -27,7 +23,7 @@ const Partners = () => {
       <Heading variant="h4" sx={{ textAlign: 'center', mb: 5 }}>
         Join 30+ builders and partners
       </Heading>
-      <Grid columns={[2, 4]}>
+      <Grid columns={3}>
         {PARTNERS.map(({ icon, size }, key) => (
           <Icon
             name={icon}

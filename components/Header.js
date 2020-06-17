@@ -67,7 +67,6 @@ const Header = () => {
           <NavLink
             href="https://github.com/daifoundation/maker-otc"
             target="_blank"
-            variant="footer"
             sx={{
               pr: 0,
               pl: [0, 4],
