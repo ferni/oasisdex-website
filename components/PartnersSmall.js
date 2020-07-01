@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Heading, Grid, Flex } from 'theme-ui';
+import { jsx, Container, Heading, Grid } from 'theme-ui';
 import { Icon } from '@makerdao/dai-ui-icons';
 
 const PARTNERS = [
@@ -21,9 +21,9 @@ const Partners = () => {
   return (
     <Container variant="landingContainer" my={6}>
       <Heading variant="h4" sx={{ textAlign: 'center', mb: 5 }}>
-        Join 30+ builders and partners
+        Join 30+ builders integrating OasisDEX Protocol
       </Heading>
-      <Grid columns={3}>
+      <Grid columns={3} style={{display: 'none'}}>
         {PARTNERS.map(({ icon, size }, key) => (
           <Icon
             name={icon}
