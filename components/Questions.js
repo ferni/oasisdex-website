@@ -39,24 +39,28 @@ const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
     <Box
       key={question}
     >
-      <div className="question-row">
+      <Box sx={{my: '10px'}}>
         <div style={{ cursor: 'pointer' }} onClick={onClick}>
-          <Text className="question">{question}</Text>
+          <Text>{question}</Text>
           <div className="plus-minus-toggle" />
         </div>
-      </div>
-      <div className="answer" style={{ maxHeight: isSelected ? height : 0 }}>
+      </Box>
+      <Box sx={{
+        maxHeight: isSelected ? height : 0,
+        overflow: 'hidden',
+        transition: 'max-height 350ms ease'
+      }}>
         <div ref={answerElement}>
-          <Text as="div" className="answer-text">
+          <Text as="div" sx={{py: '16px'}}>
             {answer}
           </Text>
         </div>
-      </div>
+      </Box>
     </Box>
   );
 };
 
-const Questions = ({ questions }) => {
+const Questions = ({ questions, ...props }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
@@ -68,7 +72,7 @@ const Questions = ({ questions }) => {
         lineHeight: '25px'
       }}
       px={{ s: '12px', m: 0 }}
-      m={{ s: '25px auto', m: '29px auto' }}
+      {...props}
     >
       {questions.map(({ q, a }, index) => {
         const isSelected = index === selectedIndex;

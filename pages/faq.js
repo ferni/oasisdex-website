@@ -29,11 +29,11 @@ const FAQs = () => (
     <Head>
       <title>OasisDEX Protocol - FAQs</title>
     </Head>
-    <Container>
+    <Container sx={{minHeight: '800px'}}>
       <Heading variant="largeHeading" as="h1">
         FAQs
       </Heading>
-      <Questions questions={QUESTIONS_AND_ANSWERS} />
+      <Questions questions={QUESTIONS_AND_ANSWERS} sx={{marginTop: '20px'}}/>
     </Container>
   </BaseLayout>
 );
