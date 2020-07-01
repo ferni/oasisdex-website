@@ -9,7 +9,7 @@ import PartnersSmall from '../components/PartnersSmall';
 const Index = () => (
   <BaseLayout>
     <Head>
-      <title>OasisDEX Protocol Website</title>
+      <title>OasisDEX Protocol</title>
     </Head>
     <Lead />
     <Marketing />
