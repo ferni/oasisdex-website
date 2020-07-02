@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Container, Box, Grid, NavLink } from 'theme-ui';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 import BaseLayout from '../layouts/BaseLayout';
 
@@ -18,6 +19,9 @@ const DocsLayout = ({ children }) => {
 
   return (
     <BaseLayout>
+      <Head>
+        <title>OasisDEX Protocol - Docs</title>
+      </Head>
       <Container my={[3, 5]}>
         <Grid columns={[1, '200px 1fr']} sx={{ alignItems: 'flex-start' }}>
           <Grid>
