@@ -29,7 +29,7 @@ const FAQs = () => (
     <Head>
       <title>OasisDEX Protocol - FAQs</title>
     </Head>
-    <Container sx={{ minHeight: '650px', pt: '38px', pb: '100px'}}>
+    <Container sx={{ minHeight: '650px', pt: '38px', pb: '100px', pl: '30px'}}>
       <Heading variant="largeHeading" as="h1">
         FAQs
       </Heading>

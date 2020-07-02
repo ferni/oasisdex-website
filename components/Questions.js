@@ -38,10 +38,11 @@ const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
   return (
     <Box
       key={question}
+      sx={{maxWidth: '750px'}}
     >
-      <Box sx={{my: '10px'}}>
+      <Box sx={{my: '12px'}}>
         <div style={{ cursor: 'pointer' }} onClick={onClick}>
-          <Heading variant="h4" mb={2}>
+          <Heading variant="h4" mb={2} sx={{fontSize: '24px'}}>
             {question}
           </Heading>
           <div className="plus-minus-toggle" />
@@ -70,7 +71,8 @@ const Questions = ({ questions, ...props }) => {
       style={{
         textAlign: 'left',
         fontSize: '18px',
-        lineHeight: '25px'
+        lineHeight: '25px',
+        maxWidth: '800px'
       }}
       px={{ s: '12px', m: 0 }}
       {...props}
