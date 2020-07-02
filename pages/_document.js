@@ -16,7 +16,6 @@ class MyDocument extends Document {
             name="description"
             content="Information about the OasisDEX Protocol."
           />
-          <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
         </Head>
         <body>
           <InitializeColorMode />
