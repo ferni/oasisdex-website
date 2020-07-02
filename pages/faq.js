@@ -5,7 +5,7 @@ import BaseLayout from '../layouts/BaseLayout';
 import Questions from '../components/Questions';
 
 const QUESTIONS_AND_ANSWERS = [{
-  q: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+  q: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit asdfasdf asdf asd fasdf ?',
   a: <span>
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -29,7 +29,7 @@ const FAQs = () => (
     <Head>
       <title>OasisDEX Protocol - FAQs</title>
     </Head>
-    <Container sx={{minHeight: '800px'}}>
+    <Container sx={{ minHeight: '650px', pt: '38px', pb: '100px'}}>
       <Heading variant="largeHeading" as="h1">
         FAQs
       </Heading>

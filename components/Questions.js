@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Text } from 'theme-ui';
+import { jsx, Box, Text, Heading } from 'theme-ui';
 
 import React, { useRef, useState } from 'react';
 
@@ -41,17 +41,19 @@ const QuestionAndAnswer = ({ question, answer, onClick, isSelected }) => {
     >
       <Box sx={{my: '10px'}}>
         <div style={{ cursor: 'pointer' }} onClick={onClick}>
-          <Text>{question}</Text>
+          <Heading variant="h4" mb={2}>
+            {question}
+          </Heading>
           <div className="plus-minus-toggle" />
         </div>
       </Box>
       <Box sx={{
         maxHeight: isSelected ? height : 0,
         overflow: 'hidden',
-        transition: 'max-height 350ms ease'
+        transition: 'max-height 0.2s ease'
       }}>
         <div ref={answerElement}>
-          <Text as="div" sx={{py: '16px'}}>
+          <Text as="div" sx={{py: '16px', lineHeight: '32px'}}>
             {answer}
           </Text>
         </div>
@@ -66,7 +68,6 @@ const Questions = ({ questions, ...props }) => {
   return (
     <Box
       style={{
-        maxWidth: '800px',
         textAlign: 'left',
         fontSize: '18px',
         lineHeight: '25px'
