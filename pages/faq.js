@@ -5,22 +5,19 @@ import BaseLayout from '../layouts/BaseLayout';
 import Questions from '../components/Questions';
 
 const QUESTIONS_AND_ANSWERS = [{
-  q: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit asdfasdf asdf asd fasdf ?',
+  q: 'What is the OasisDEX Protocol?',
   a: <span>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    The OasisDEX Protocol is a fully decentralised, non-custodial, permisionless on-chain matching market. It allows users of the Protocol to create orders which are then matched with other buyers and sellers of the Protocol, with settlement happening completely on-chain.
   </span>
 }, {
-  q: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+  q: 'Does anyone else have access to my funds when I am using the Protocol?',
   a: <span>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    No, OasisDEX Protocol is non-custodial. This means that only the OasisDEX smart contract interacts with your funds, and only you can create or cancel orders. Because of this, it is also very important you have the relevant backups of your private keys, as there is no-one that can access your funds for you should you lose access to your wallet. 
   </span>
 }, {
-  q: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit?',
+  q: 'Are there any limitations on who can integrate the OasisDEX Protocol?',
   a: <span>
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    No, anyone can integrate the OasisDEX Protocol, the only requirement is that your project is running on the Ethereum Blockchain. There are also no fees and no permission needed from anyone. To find out how to get started with your integration, have a look at our docs page. 
   </span>
 }];
 

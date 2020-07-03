@@ -3,7 +3,7 @@ import { jsx, NavLink, Flex, Container, Link as ThemeLink } from 'theme-ui';
 import Link from 'next/link';
 import { Icon } from '@makerdao/dai-ui-icons';
 
-const LINKS = [{ url: '/terms', name: 'Terms' }];
+const LINKS = [{ url: '/legal', name: 'Legal' }];
 
 const Footer = () => {
   return (
@@ -19,7 +19,7 @@ const Footer = () => {
             <Icon name="logo" size="auto" width="152" height="40" />
           </ThemeLink>
         </Link>
-        <Flex
+        {/* <Flex
           sx={{
             ml: ['auto'],
             mr: [null, 0],
@@ -30,7 +30,7 @@ const Footer = () => {
               <NavLink sx={{ '&:last-child': { pr: 0 } }}>{name}</NavLink>
             </Link>
           ))}
-        </Flex>
+        </Flex> */}
       </Flex>
     </Container>
   );
