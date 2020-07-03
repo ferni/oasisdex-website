@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Heading, Text, Button } from 'theme-ui';
-import Link from 'next/link';
+import { jsx, Container, Heading, Text, Button, Link } from 'theme-ui';
 import { Icon } from '@makerdao/dai-ui-icons';
 
 const Lead = () => {
